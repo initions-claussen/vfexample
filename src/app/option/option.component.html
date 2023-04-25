@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="container">
+    <h3 style="margin: 1rem 0; font-size: 2rem">Small size</h3>
+    <div class="vf-visual-pickers__multi-select vf-visual-pickers-sm" style="margin-bottom: 20px">
+      <input type="checkbox" id="multi-select-sm-1" name="vf-visual-pickers" />
+      <label class="vf-visual-pickers__label" for="multi-select-sm-1">Option 1</label>
+      <span class="vf-visual-pickers__icon"></span>
+    </div>
+
+    <div class="vf-visual-pickers__multi-select vf-visual-pickers-sm" style="margin-bottom: 20px">
+      <input type="checkbox" id="multi-select-sm-2" name="vf-visual-pickers" />
+      <label class="vf-visual-pickers__label" for="multi-select-sm-2">Option 2</label>
+      <span class="vf-visual-pickers__icon"></span>
+    </div>
+
+    <div class="vf-visual-pickers__multi-select vf-visual-pickers-sm" style="margin-bottom: 20px">
+      <input type="checkbox" id="multi-select-sm-3" name="vf-visual-pickers" />
+      <label class="vf-visual-pickers__label" for="multi-select-sm-3">Option 3</label>
+      <span class="vf-visual-pickers__icon"></span>
+    </div>
+  </div>
+</div>
+
+<hr />
+<h5>Test</h5>
+
+<div class="container">
+  <div class="container">
+    <h3 style="margin: 1rem 0; font-size: 2rem">Small size</h3>
+    <div class="vf-visual-pickers__multi-select vf-visual-pickers-sm" *ngFor="let option of options"
+      style="margin-bottom: 20px">
+      <input type="checkbox" id="multi-select-sm-{{option}}-test" name="vf-visual-pickers" [checked]="isChecked(option)"
+        (change)="onChange(option)" />
+      <label class="vf-visual-pickers__label" for="multi-select-sm-{{option}}-test">{{option}}</label>
+      <span class="vf-visual-pickers__icon"></span>
+    </div>
+  </div>
+</div>
